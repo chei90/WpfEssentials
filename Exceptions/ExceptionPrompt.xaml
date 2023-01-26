@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfEssentials.Exceptions.ExceptionPrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="An error occured..."
+        SizeToContent="WidthAndHeight"
+        MaxWidth="1200"
+        MaxHeight="800">
+
+    <StackPanel>
+        <ScrollViewer MaxHeight="900">
+            <TextBlock x:Name="ErrorTextBox"
+                       FontFamily="Helvetica"
+                       FontWeight="Light"
+                       FontSize="12"/>
+        </ScrollViewer>
+        <Border Height="1" 
+                Background="White"
+                Opacity="0.5"/>
+
+        <Button x:Name="CloseButton" 
+                Click="OnShutdownClicked" 
+                Height="50" 
+                Content="Beenden"
+                FontWeight="Medium"
+                FontFamily="Helvetica"
+                FontSize="24"
+                Margin="0,10,0,0"/>
+    </StackPanel>
+</Window>
