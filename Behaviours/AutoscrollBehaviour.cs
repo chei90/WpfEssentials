@@ -8,7 +8,6 @@ namespace WpfEssentials.Behaviours
         public static readonly DependencyProperty AutoScrollProperty =
             DependencyProperty.RegisterAttached("AutoScroll", typeof(bool), typeof(AutoScrollBehavior), new PropertyMetadata(false, AutoScrollPropertyChanged));
 
-
         public static void AutoScrollPropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs args)
         {
             var scrollViewer = obj as ScrollViewer;
