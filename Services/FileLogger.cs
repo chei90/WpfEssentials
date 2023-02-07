@@ -10,11 +10,19 @@ namespace WpfEssentials.Services
         public FileLogger(string filePath) 
         {
             _writer = File.AppendText(filePath);
+            _writer.Flush();
         }
 
-        public void Log(string message) => _writer.WriteLine(message);
+        public void Log(string message)
+        {
+            try
+            {
+                _writer.WriteLine(message);
+            }
+            catch (ObjectDisposedException)
+            { }
+        }
 
         public void Dispose() => _writer.Dispose();
-
     }
 }
